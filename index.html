@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4bc402a21.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minor Project</title>
+</head>
+
+<body>
+    <header>Calculate the spread of Skin Cancer</header>
+    <div class="form-container">
+
+        <form onsubmit="onsub(event,'path1','path2')">
+            <div class="form-group">
+                <label class="form-label">Upload Image 1</label>
+                <input type="file" id="imgInp" accept="image/*" onchange="loadFile(event,'image1')"
+                    class="form-control-file">
+                <input type="text" placeholder="enter filepath" class=".form-control-file" name="" id="path1"
+                    onchange="setpath1(event)">
+                <img class="inpimg" id="image1" src="#" alt="" width="200px" />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Upload Image 2</label>
+                <input type="file" accept="image/*" onchange="loadFile(event,'image2')" class="form-control-file">
+                <input type="text" placeholder="enter filepath" class=".form-control-file" name="" id="path2"
+                    onchange="setpath2(event)">
+                <img class="inpimg" id="image2" src="#" alt="" width="200px" />
+            </div>
+            <div class="butt"><button type="submit" class="btn btn-primary">Submit</button></div>
+            <span id="result"></span>
+        </form>
+    </div>
+    <!-- <footer>Done BY</footer> -->
+<script src="script.js"></script></body>
+
+</html>
